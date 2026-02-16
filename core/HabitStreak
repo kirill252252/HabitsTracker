@@ -1,0 +1,25 @@
+package core;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+import java.util.Collections;
+import java.util.List;
+
+public class HabitStreak {
+
+    public static int calculate(Habit habit) {
+
+        List<LocalDate> dates = habit.getCompletedDates();
+        if (dates.isEmpty()) return 0;
+
+        Collections.sort(dates);
+        int streak = 1;
+
+        for (int i = dates.size() - 1; i > 0; i--) {
+            long diff = ChronoUnit.DAYS.between(dates.get(i - 1), dates.get(i));
+            if (diff == 1) streak++;
+            else break;
+        }
+
+        return streak;
+    }
+}
