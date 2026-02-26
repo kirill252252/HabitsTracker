@@ -15,8 +15,8 @@ public class HabitExport {
         for (Habit habit : manager.getHabits()) {
             writer.write(
                     habit.getId() + ";" +
-                    habit.getName() + ";" +
-                    habit.getCategory().getName() + "\n"
+                            habit.getName() + ";" +
+                            habit.getCategory().getName() + "\n"
             );
         }
 
