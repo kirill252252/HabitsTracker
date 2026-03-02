@@ -19,7 +19,7 @@ public class Main {
         boolean running = true;
 
         while (running) {
-            System.out.println("\n=== МЕНЮ ПРИВЫЧЕК ===");
+            System.out.println("\n МЕНЮ ПРИВЫЧЕК");
             System.out.println("1. Добавить привычку");
             System.out.println("2. Пометить привычку как выполненную");
             System.out.println("3. Показать все привычки");
